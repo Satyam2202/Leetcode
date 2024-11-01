@@ -1,0 +1,6 @@
+# Write your MySQL query statement below
+WITH CTE AS (
+SELECT teacher_id,subject_id    FROM Teacher GROUP BY teacher_id,subject_id
+)
+
+SELECT teacher_id,COUNT(subject_id) as cnt  FROM CTE GROUP BY teacher_id;
